@@ -1,0 +1,18 @@
+---
+server:
+  port: 8081
+  contextPath: /employee-dashboard
+---
+datasource:
+  employeeapp:
+    url: jdbc:h2:${user.dir}/target/DB/test.h2db
+    username: SA
+    password:
+    driverClassName: org.h2.Driver
+    defaultSchema:
+    maxPoolSize: 10
+    hibernate:
+      hbm2ddl.method: create-drop
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.H2Dialect
